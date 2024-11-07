@@ -1,0 +1,325 @@
+@font-face {
+    src: url('fonts/Merriweather/Merriweather-LightItalic.ttf');
+    font-family: "header_h1";
+  }
+   
+  @font-face {
+    src: url('fonts/Merriweather/Merriweather-BlackItalic.ttf');
+    font-family: "header_p";
+  }
+  
+  @font-face {
+    src: url('fonts/Merriweather/Merriweather-Black.ttf');
+    font-family: "content_p";
+  }
+   
+   /* Общие стили для страницы */
+   .grid-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-rows: auto;
+      grid-gap: 2vw;
+  }
+  
+  .grid-item {
+    min-height: 100px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .grid-item h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+    color: rgb(152, 115, 201);
+    text-shadow: 
+          -0   -2px 6px #ffffff,
+           0   -2px 6px #ffffff,
+          -0    2px 6px #ffffff,
+           0    2px 6px #ffffff,
+          -2px -0   6px #ffffff,
+           2px -0   6px #ffffff,
+          -2px  0   6px #ffffff,
+           2px  0   6px #ffffff,
+          -1px -2px 6px #ffffff,
+           1px -2px 6px #ffffff,
+          -1px  2px 6px #ffffff,
+           1px  2px 6px #ffffff,
+          -2px -1px 6px #ffffff,
+           2px -1px 6px #ffffff,
+          -2px  1px 6px #ffffff,
+           2px  1px 6px #ffffff,
+          -2px -2px 6px #ffffff,
+           2px -2px 6px #ffffff,
+          -2px  2px 6px #ffffff,
+           2px  2px 6px #ffffff,
+          -2px -2px 6px #ffffff,
+           2px -2px 6px #000000,
+          -2px  2px 6px #000000,
+           2px  2px 6px #000000;
+  }
+  
+  .education {
+      background-color: rgb(161, 48, 48);
+  }
+  
+  .display {
+    font-family: content_p, 'Times New Roman', Times, serif;
+    background-color: rgba(135, 61, 255, 0.788);
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 20px;
+  }
+  .collapsible {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #a371aa71;
+  }
+  
+  .content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #1d97b6;
+    z-index: 1;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    padding: 0 1em;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
+  .skill {
+    position: relative;
+    margin-bottom: 5%;
+    box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+  }
+  
+  .collapsible.active .content {
+    max-height: 1000px;
+    visibility: visible;
+  }
+  
+  .timeline {
+    position: relative;
+    padding-left: 40px;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .timeline-marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #14D100;
+  }
+  
+  .timeline-content {
+    margin-left: 35px;
+    padding-left: 10px;
+    border-left: 2px solid #e49e1c;
+    min-height: 30px;
+  }
+  
+  .timeline-content p {
+    margin: 0;
+    padding: 5px 0;
+  }
+  
+  .timeline-content-with-svg {
+    display: flex;
+    align-items: center;
+  }
+  
+  .timeline-svg {
+    margin-right: 10px;
+  }
+  
+  .timeline-svg img {
+    width: 60px;
+  }
+  
+  .container {
+    width: 100%;
+    background-color: #1d97b6;
+  }
+  
+  .skills {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    color: white;
+    max-width: 100%;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  .html {background-color: #FFD700;} /* Yellow */
+  .css {background-color: #f44336;} /* Red */ 
+  .js {background-color: #9932CC;} /* Purple */
+  .python {background-color: #2196F3;} /* Blue */
+  .django {background-color: #14D100;} /* Green */
+  
+  body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #14D100;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    gap: 20px;
+    padding: 20px;
+    background-color: #e69925;
+    align-items: center;
+    text-align: center;
+    background-image: url('img/header.jpeg');
+    background-size: cover; /* чтобы изображение занимало всю доступную область */
+    background-position: center; /* для центрирования изображения */
+    -webkit-box-shadow: 0px 9px 11px 1px rgba(34, 60, 80, 1);
+    -moz-box-shadow: 0px 9px 11px 1px rgba(34, 60, 80, 1);
+    box-shadow: 0px 9px 11px 1px rgba(34, 60, 80, 1);
+  }
+  
+  .profile_info {
+    font-family: header_h1;
+    padding: 20px;
+  }
+  
+  .profile_info h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 
+		-0   -2px 6px #000000,
+		 0   -2px 6px #000000,
+		-0    2px 6px #000000,
+		 0    2px 6px #000000,
+		-2px -0   6px #000000,
+		 2px -0   6px #000000,
+		-2px  0   6px #000000,
+		 2px  0   6px #000000,
+		-1px -2px 6px #000000,
+		 1px -2px 6px #000000,
+		-1px  2px 6px #000000,
+		 1px  2px 6px #000000,
+		-2px -1px 6px #000000,
+		 2px -1px 6px #000000,
+		-2px  1px 6px #000000,
+		 2px  1px 6px #000000,
+		-2px -2px 6px #000000,
+		 2px -2px 6px #000000,
+		-2px  2px 6px #000000,
+		 2px  2px 6px #000000,
+		-2px -2px 6px #000000,
+		 2px -2px 6px #000000,
+		-2px  2px 6px #000000,
+		 2px  2px 6px #000000;
+}
+    
+  
+  .profile_description {
+    font-family: header_p;
+    font-size: 1em;
+    padding: 10px;
+    text-align: justify;
+  }
+  
+  .profile_foto {
+    width: 200%; 
+    max-width: 300px; 
+    height: auto;
+    border-radius: 10%;
+    box-shadow: 0px 0px 26px 18px rgba(29, 30, 30, 0.23);
+    margin-bottom: 0px; 
+  }
+  
+  
+  .profile_description p {
+    font-family: header_p;
+      font-size: 20px;
+      color: rgb(0, 0, 0);
+    }   
+  
+  
+  .contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+  
+  .contact-info h2 {
+    margin-right: 20px; /* Расстояние между заголовком "Контакты" и изображением */
+  }
+  
+  .contact-info img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .contact-info p {
+    font-family: content_p, 'Times New Roman', Times, serif;
+    font-size: 2em;
+    margin-left: 1.2em;
+    
+  }
+  
+      main {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+      }
+      section {
+        padding: 20px;
+        border-radius: 10px;
+        -webkit-box-shadow: 5px 5px 15px -2px rgba(34, 60, 80, 0.36);
+        -moz-box-shadow: 5px 5px 15px -2px rgba(34, 60, 80, 0.36);
+        box-shadow: 5px 5px 15px -2px rgba(34, 60, 80, 0.36);
+      }
+  
+      .ico {
+        display: flex;
+        align-items: center;
+      }
+      
+      .ico img {
+        float: right;
+        margin-left: 10px;
+        width: 70px;
+        height: 70px;
+      }
+  
+      footer {
+        font-family: content_p, 'Times New Roman', Times, serif;
+        text-align: center;
+        padding: 10px;
+        background-color: #e49e1c;
+      }
+  /* Стили для мобильной версии */
+@media (max-width: 768px) {
+  .profile_info {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+    /* Стили для десктопной версии */
+    @media (min-width: 768px) {
+      main {
+        grid-template-columns: 1fr ;
+      }
+    }
